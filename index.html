@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #login-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #login-btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <button id="login-btn" onclick="checkLocation()">Login</button>
+
+<script>
+  function checkLocation() {
+    var location = prompt("Please enter your location:");
+    if (location && (location.toLowerCase() == "chandigarh" || location.toLowerCase() == "punjab" || location.toLowerCase() == "haryana")) {
+      window.location.href = "login.html";
+    } else {
+      alert("Sorry, our services are currently only available in Chandigarh, Punjab, and Haryana.");
+    }
+  }
+</script>
+</body>
+</html>
